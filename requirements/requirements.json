@@ -1,0 +1,257 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "id": "anonymous-terraria-community-server",
+    "name": "匿名Terrariaサーバー",
+    "purpose": "既存のDiscord内の人間関係や知名度に過度に左右されず、新しい表示名と公平なスタートで協力プレイできる場を作る。",
+    "scope": "Terraria + TShock community multiplayer server; custom plugin proposed",
+    "timezone": "Asia/Tokyo",
+    "spec_state": "pre-implementation",
+    "do_not_start_plugin_implementation_until_spec_ready": true
+  },
+  "source_of_truth": {
+    "priority": [
+      "explicit_user_decisions_in_conversation",
+      "requirements_with_status_confirmed",
+      "draft_proposals",
+      "validated_technical_constraints"
+    ],
+    "if_technical_requirement_impossible": "Do not silently drop it. Document the blocker, validate a safe alternative, update the requirements and explain the change."
+  },
+  "status_definitions": {
+    "confirmed": "ユーザーが明示した決定または合意済みの方針",
+    "draft": "初期案。実運用前にバランス調整できる",
+    "validation_required": "実装対象のDLL／ソース／テスト環境で確認するまで実現可能と断言しない"
+  },
+  "requirements": [
+    {
+      "id": "R-001",
+      "status": "confirmed",
+      "priority": "critical",
+      "area": "参加者操作",
+      "text": "参加者は通常プレイのためにコマンドを入力しない。案内、ミッション確認、納品、報酬受取はゲーム内UIで提供する。"
+    },
+    {
+      "id": "R-002",
+      "status": "confirmed",
+      "priority": "critical",
+      "area": "匿名性",
+      "text": "通常のDiscord名や本人特定情報をゲーム内表示に使うよう求めない。表示名と報酬・進捗の内部識別を分離する。完全匿名を保証する表現はしない。"
+    },
+    {
+      "id": "R-003",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "環境",
+      "text": "Terraria＋TShockの新規ワールド。24時間稼働を目標とし、時刻基準はAsia/Tokyo。実装時点の対応安定版を固定する。"
+    },
+    {
+      "id": "R-004",
+      "status": "confirmed",
+      "priority": "critical",
+      "area": "キャラクター",
+      "text": "SSCを有効にしてキャラクターの持ち込みを防ぐ。認証・再接続方式はAPI検証必須。参加者に/registerや/loginを要求しない方針。"
+    },
+    {
+      "id": "R-005",
+      "status": "confirmed",
+      "priority": "critical",
+      "area": "既存連携",
+      "text": "既存のTerraria⇔Discord TShockチャット連携は変更しない。Discord→ゲームの発言は管理者のみ。匿名Discordチャットは新設しない。"
+    },
+    {
+      "id": "R-006",
+      "status": "confirmed",
+      "priority": "critical",
+      "area": "ボス進行",
+      "text": "boss_schedule.jsonを基準に開設日時から経過実時間でボスを解禁。停止中も時間は進む。ミッション達成で前倒ししない。"
+    },
+    {
+      "id": "R-007",
+      "status": "confirmed",
+      "priority": "critical",
+      "area": "ボス進行",
+      "text": "未解禁ボスは召喚アイテム、自然出現、イベント経由、派生出現などすべてのルートで出現を阻止する。APIで全経路を検証する。"
+    },
+    {
+      "id": "R-008",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "ボス進行",
+      "text": "前のボス未討伐でも後続ボスを予定どおり時刻解禁する。Terraria標準のワールド条件とは分離して扱う。"
+    },
+    {
+      "id": "R-009",
+      "status": "confirmed",
+      "priority": "critical",
+      "area": "日次更新",
+      "text": "全体・個人ミッションの進捗を毎日00:00 JSTに更新。未達成進捗は持ち越さず、達成履歴と受取済み記録は保持する。"
+    },
+    {
+      "id": "R-010",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "再起動",
+      "text": "停止中に複数日経過しても古い日を再生せず、起動時に現在のJST日付と解禁状態へ同期する。処理は冪等であること。"
+    },
+    {
+      "id": "R-011",
+      "status": "confirmed",
+      "priority": "critical",
+      "area": "ミッション候補",
+      "text": "候補プールは採用予定数のおよそ3倍を目安とする。日数・件数・条件は固定コードにせず設定可能にする。初期候補は7カテゴリ×18件＝126件。"
+    },
+    {
+      "id": "R-012",
+      "status": "draft",
+      "priority": "medium",
+      "area": "ミッション選出",
+      "text": "有効候補から当日のミッションを選定。直近3日回避は初期案で、JSONの設定値として扱う。"
+    },
+    {
+      "id": "R-013",
+      "status": "confirmed",
+      "priority": "critical",
+      "area": "報酬",
+      "text": "個人ミッション報酬は達成者本人のみ。全体ミッション報酬は対象のオフライン参加者にも後から渡せるようにする。"
+    },
+    {
+      "id": "R-014",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "デイリー報酬",
+      "text": "スポーンの専用受取場所で各プレイヤーがJST日付ごとに1回受け取る。通常チェストの安全な横取り判定ができなければNPC/UIに切り替える。"
+    },
+    {
+      "id": "R-015",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "共有報酬",
+      "text": "共有報酬の段階は累積全体実績で上昇し、日次リセットでは低下しない。ミッション日次進捗とは独立管理する。"
+    },
+    {
+      "id": "R-016",
+      "status": "confirmed",
+      "priority": "critical",
+      "area": "報酬整合性",
+      "text": "インベントリ満杯時に報酬を失わない。切断・再起動・連打で二重付与しない。結果が曖昧な場合は自動再配布せず要確認にできる。"
+    },
+    {
+      "id": "R-017",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "設定",
+      "text": "ミッション・条件・数量・報酬・解禁日・文言・区域などをJSON設定に分離する。"
+    },
+    {
+      "id": "R-018",
+      "status": "confirmed",
+      "priority": "critical",
+      "area": "永続化",
+      "text": "進捗、日次選定、完了履歴、受取記録、累積実績、解禁状況、手動介入、監査情報をSQLite等に永続化する。"
+    },
+    {
+      "id": "R-019",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "運営",
+      "text": "管理者向け状態確認・設定再読込・報酬再処理・強制解禁・バックアップ検証機能を用意し、重要操作は監査ログに残す。"
+    },
+    {
+      "id": "R-020",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "保護",
+      "text": "公共施設と自由建築区域を分け、共有設備・掲示・報酬受取場所を保護する。TShock標準保護と独自保護の競合を避ける。"
+    },
+    {
+      "id": "R-021",
+      "status": "confirmed",
+      "priority": "critical",
+      "area": "仕様進行",
+      "text": "要件が確定するまでプラグイン本体のコード作成に着手しない。"
+    },
+    {
+      "id": "R-022",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "公開資料",
+      "text": "利用者向け公開ページはユーザー体験を説明し、内部のAPI・DB・設定ファイル・権限など実装細部を載せない。"
+    },
+    {
+      "id": "R-023",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "AI資料",
+      "text": "AI向け要件は公開ページから分離する。決定事項・初期案・技術検証待ちを明確に区別し、候補一覧とスケジュールを構造化ファイルで管理する。"
+    },
+    {
+      "id": "R-024",
+      "status": "validation_required",
+      "priority": "critical",
+      "area": "認証",
+      "text": "参加者にコマンドを要求せずSSCと安全な内部アカウント識別を両立する方法を、対象TShock版のソースと実機で検証する。"
+    },
+    {
+      "id": "R-025",
+      "status": "validation_required",
+      "priority": "critical",
+      "area": "ボス制御",
+      "text": "ボス出現の全ルートを捕捉できるイベント／フックの実在と順序を対象バージョンで検証。満たせない場合は代替策確立まで実装に進まない。"
+    },
+    {
+      "id": "R-026",
+      "status": "validation_required",
+      "priority": "critical",
+      "area": "報酬整合性",
+      "text": "プラグインDBの報酬台帳とSSCキャラクター保存の間にあるクラッシュ境界を試験し、重複と消失を検出・復旧する。"
+    },
+    {
+      "id": "R-027",
+      "status": "validation_required",
+      "priority": "high",
+      "area": "ゲーム内UI",
+      "text": "看板／NPC／チェスト操作などから安全に使えるUI手段を検証。コマンド要求を代替手段にしない。"
+    },
+    {
+      "id": "R-028",
+      "status": "validation_required",
+      "priority": "high",
+      "area": "判定イベント",
+      "text": "採掘、設置、破壊、探索、住居成立、敵討伐、納品を正確に検出できるサーバーイベントを対象版で確認する。"
+    },
+    {
+      "id": "R-029",
+      "status": "draft",
+      "priority": "medium",
+      "area": "バランス",
+      "text": "ミッションの数量・報酬・日次採用数は初期案。参加人数、達成率、平均時間の観測に基づき調整する。"
+    },
+    {
+      "id": "R-030",
+      "status": "draft",
+      "priority": "medium",
+      "area": "参加体験",
+      "text": "途中参加・長期不在者が楽しめる進行案内と、その時点の進行段階に合わせた導線を用意する。"
+    }
+  ],
+  "linked_specs": {
+    "mission_candidates": "mission_candidates.json",
+    "boss_schedule": "boss_schedule.json",
+    "full_detail": "project_requirements.md"
+  },
+  "out_of_scope": [
+    "既存のDiscordチャット連携の改修",
+    "一般参加者からDiscord→ゲームへの発言を許可する機能",
+    "参加者にコマンドを入力させるフォールバック",
+    "完全な追跡不能性の保証"
+  ],
+  "acceptance_criteria_summary": [
+    "新規参加から通常プレイまで参加者コマンドなしで進める",
+    "同じプレイヤーの再接続後にキャラクター・進捗が正しく復元される",
+    "日次更新・再起動・多重処理で進捗や報酬が二重処理されない",
+    "未解禁ボスのすべての出現経路を検証で封鎖する",
+    "個人報酬と全体報酬の対象範囲が正しい",
+    "バックアップからの復元と不明確な報酬状態の安全な扱いを試験する"
+  ]
+}

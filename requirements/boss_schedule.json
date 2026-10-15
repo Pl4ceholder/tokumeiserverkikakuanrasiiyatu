@@ -1,0 +1,103 @@
+{
+  "schema_version": "1.0",
+  "timezone": "Asia/Tokyo",
+  "anchor": "server_opening_datetime",
+  "unlock_policy": "elapsed_real_time",
+  "default_time": "same_local_time_as_opening",
+  "mission_can_accelerate_unlock": false,
+  "server_downtime_pauses_schedule": false,
+  "never_relock_already_unlocked_bosses_on_config_change": true,
+  "milestones": [
+    {
+      "day_after_open": 0,
+      "unlock": "探索・採掘・住居整備",
+      "note": "準備期間"
+    },
+    {
+      "day_after_open": 1,
+      "unlock": "キングスライム",
+      "note": "最初のボス"
+    },
+    {
+      "day_after_open": 2,
+      "unlock": "クトゥルフのめだま",
+      "note": "序盤進行"
+    },
+    {
+      "day_after_open": 3,
+      "unlock": "世界を喰らう者／クトゥルフの脳みそ",
+      "note": "ワールドの邪悪バイオームに応じて対象を決定"
+    },
+    {
+      "day_after_open": 4,
+      "unlock": "クイーンビー",
+      "note": "任意・装備強化"
+    },
+    {
+      "day_after_open": 5,
+      "unlock": "スケルトロン",
+      "note": "ダンジョン進行"
+    },
+    {
+      "day_after_open": 6,
+      "unlock": "ディアクロップス",
+      "note": "任意ボス"
+    },
+    {
+      "day_after_open": 7,
+      "unlock": "ウォールオブフレッシュ＋残りの未解禁Pre-Hardmodeボス",
+      "note": "Hardmode移行日。先行解禁済みは重複扱いしない"
+    },
+    {
+      "day_after_open": 8,
+      "unlock": "クイーンスライム",
+      "note": "任意Hardmodeボス"
+    },
+    {
+      "day_after_open": 10,
+      "unlock": "ツインズ、デストロイヤー",
+      "note": "この日に解禁するメカニカルボスはこの2体のみ"
+    },
+    {
+      "day_after_open": 11,
+      "unlock": "スケルトロン・プライム",
+      "note": "メカニカルボス"
+    },
+    {
+      "day_after_open": 12,
+      "unlock": "プランテラ",
+      "note": "中盤～終盤"
+    },
+    {
+      "day_after_open": 14,
+      "unlock": "ゴーレム",
+      "note": "ジャングル寺院"
+    },
+    {
+      "day_after_open": 15,
+      "unlock": "デュークフィッシュロン",
+      "note": "任意ボス"
+    },
+    {
+      "day_after_open": 16,
+      "unlock": "光の女帝",
+      "note": "任意ボス"
+    },
+    {
+      "day_after_open": 17,
+      "unlock": "ルナティックカルティスト",
+      "note": "終盤"
+    },
+    {
+      "day_after_open": 18,
+      "unlock": "ルナイベント／セレスティアルピラー",
+      "note": "最終決戦準備"
+    },
+    {
+      "day_after_open": 20,
+      "unlock": "ムーンロード",
+      "note": "最終ボス"
+    }
+  ],
+  "technical_requirement": "Block every pre-unlock spawn route, including summon items, natural spawns, event-mediated and derived spawns. Validate all hooks against the exact deployed Terraria/TShock/OTAPI versions before implementation."
+}

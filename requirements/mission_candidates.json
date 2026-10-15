@@ -1,0 +1,1276 @@
+{
+  "schema_version": "1.0",
+  "description": "126件のミッション候補。全件を採用する意味ではなく、選定・調整用の候補プール。条件・数量は初期案。",
+  "total": 126,
+  "categories": {
+    "resource_collection": "採掘・資源収集",
+    "exploration": "探索・発見",
+    "building": "建築・拠点整備",
+    "crafting_delivery": "製作・納品",
+    "combat_boss": "戦闘・討伐",
+    "global_cooperation": "全体協力",
+    "personal_challenge": "個人向けチャレンジ"
+  },
+  "missions": [
+    {
+      "id": "R01",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "木材集め",
+      "initial_condition": "木材150個収集",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R02",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "石材採掘",
+      "initial_condition": "石ブロック250個採掘",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R03",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "砂漠資源集め",
+      "initial_condition": "砂150個収集",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R04",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "土・粘土の採集",
+      "initial_condition": "対象ブロック100個収集",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R05",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "銅・スズ採掘",
+      "initial_condition": "鉱石50個採掘",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R06",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "鉄・鉛採掘",
+      "initial_condition": "鉱石50個採掘",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R07",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "銀・タングステン採掘",
+      "initial_condition": "鉱石40個採掘",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R08",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "金・プラチナ採掘",
+      "initial_condition": "鉱石30個採掘",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R09",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "宝石集め",
+      "initial_condition": "宝石15個収集",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R10",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "キノコ採集",
+      "initial_condition": "指定キノコ20個収集",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R11",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "ハーブ採集",
+      "initial_condition": "指定ハーブ20個収集",
+      "stage": "全般",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R12",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "サボテン採集",
+      "initial_condition": "サボテン30個収集",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R13",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "雪原資源集め",
+      "initial_condition": "雪・氷100個収集",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R14",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "黒曜石採集",
+      "initial_condition": "黒曜石30個収集",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R15",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "ヘルストーン採掘",
+      "initial_condition": "ヘルストーン75個採掘",
+      "stage": "地獄探索",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R16",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "Hardmode鉱石採掘",
+      "initial_condition": "対象鉱石100個採掘",
+      "stage": "Hardmode",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R17",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "光・闇のソウル収集",
+      "initial_condition": "指定ソウル15個収集",
+      "stage": "Hardmode",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "R18",
+      "category": "resource_collection",
+      "category_label": "採掘・資源収集",
+      "title": "クリスタルシャード採集",
+      "initial_condition": "25個収集",
+      "stage": "Hardmode",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E01",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "周辺開拓",
+      "initial_condition": "スポーンから横500タイル以上移動",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E02",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "地下への進出",
+      "initial_condition": "地下層へ到達",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E03",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "深部への挑戦",
+      "initial_condition": "洞窟層へ到達",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E04",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "地獄探索",
+      "initial_condition": "地底世界へ到達",
+      "stage": "中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E05",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "雪原探索",
+      "initial_condition": "雪バイオームへ到達",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E06",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "砂漠探索",
+      "initial_condition": "砂漠へ到達",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E07",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "ジャングル探索",
+      "initial_condition": "ジャングルへ到達",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E08",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "海洋探索",
+      "initial_condition": "海洋バイオームへ到達",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E09",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "邪悪な大地の調査",
+      "initial_condition": "ワールドの邪悪バイオームへ到達",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E10",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "空島調査",
+      "initial_condition": "浮島へ到達",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E11",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "ダンジョン発見",
+      "initial_condition": "ダンジョン付近へ到達",
+      "stage": "中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E12",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "発光キノコ地帯の発見",
+      "initial_condition": "発光キノコバイオームへ到達",
+      "stage": "中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E13",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "シマー探索",
+      "initial_condition": "シマーのあるエリアへ到達",
+      "stage": "中盤以降",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E14",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "聖域探索",
+      "initial_condition": "聖域バイオームへ到達",
+      "stage": "Hardmode",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E15",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "地下聖域探索",
+      "initial_condition": "地下聖域へ到達",
+      "stage": "Hardmode",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E16",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "ジャングル寺院探索",
+      "initial_condition": "寺院内部へ到達（進入条件を満たすこと）",
+      "stage": "中盤以降",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E17",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "ワールド遠征",
+      "initial_condition": "マップ端側の指定範囲へ到達",
+      "stage": "全般",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "E18",
+      "category": "exploration",
+      "category_label": "探索・発見",
+      "title": "多地域探索",
+      "initial_condition": "1日に異なる4バイオーム訪問",
+      "stage": "全般",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B01",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "拠点の増築",
+      "initial_condition": "ブロック100個設置",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B02",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "壁の整備",
+      "initial_condition": "背景壁100個設置",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B03",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "足場の整備",
+      "initial_condition": "足場100個設置",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B04",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "縦移動路の整備",
+      "initial_condition": "ロープ50個設置",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B05",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "照明の設置",
+      "initial_condition": "松明25個設置",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B06",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "家具の整備",
+      "initial_condition": "対象家具5個設置",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B07",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "住居建設",
+      "initial_condition": "有効なNPC住居1軒",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B08",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "集合住宅整備",
+      "initial_condition": "有効なNPC住居3軒",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B09",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "作業台の増設",
+      "initial_condition": "作業台3個設置",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B10",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "溶鉱炉の増設",
+      "initial_condition": "溶鉱炉2個設置",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B11",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "金床の設置",
+      "initial_condition": "金床2個設置",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B12",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "倉庫整備",
+      "initial_condition": "指定エリアに保管用チェスト3個設置",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B13",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "栽培環境の整備",
+      "initial_condition": "植木鉢・プランター10個設置",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B14",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "休憩地点の整備",
+      "initial_condition": "指定区域に焚き火等を設置",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B15",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "通路建設",
+      "initial_condition": "指定区域に通路用ブロック100個設置",
+      "stage": "全般",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B16",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "ボス戦場の整備",
+      "initial_condition": "指定区域に足場100個設置",
+      "stage": "ボス攻略前",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B17",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "拠点照明の増設",
+      "initial_condition": "公共区域に照明10個設置",
+      "stage": "全般",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "B18",
+      "category": "building",
+      "category_label": "建築・拠点整備",
+      "title": "ベッドの設置",
+      "initial_condition": "指定区域にベッド1個設置",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D01",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "木材納品",
+      "initial_condition": "木材100個を専用端末に納品",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D02",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "石材納品",
+      "initial_condition": "石材100個を納品",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D03",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "鉱石納品",
+      "initial_condition": "指定鉱石30個を納品",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D04",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "インゴット納品",
+      "initial_condition": "指定インゴット20個を納品",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D05",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "松明納品",
+      "initial_condition": "松明30個を納品",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D06",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "ロープ納品",
+      "initial_condition": "ロープ50個を納品",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D07",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "回復用品納品",
+      "initial_condition": "回復ポーション5個を納品",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D08",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "強化ポーション納品",
+      "initial_condition": "指定ポーション5個を納品",
+      "stage": "中盤以降",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D09",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "爆発物納品",
+      "initial_condition": "指定爆発物5個を納品",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D10",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "弾薬納品",
+      "initial_condition": "指定弾薬・矢100個を納品",
+      "stage": "全般",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D11",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "ハーブ納品",
+      "initial_condition": "指定ハーブ10個を納品",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D12",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "キノコ納品",
+      "initial_condition": "指定キノコ10個を納品",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D13",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "釣果納品",
+      "initial_condition": "対象魚5個を納品",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D14",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "釣り道具の補給",
+      "initial_condition": "餌10個を納品",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D15",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "Hardmode鉱石納品",
+      "initial_condition": "対象鉱石30個を納品",
+      "stage": "Hardmode",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D16",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "ソウル納品",
+      "initial_condition": "指定ソウル10個を納品",
+      "stage": "Hardmode",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D17",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "クリスタルシャード納品",
+      "initial_condition": "15個を納品",
+      "stage": "Hardmode",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "D18",
+      "category": "crafting_delivery",
+      "category_label": "製作・納品",
+      "title": "進行素材納品",
+      "initial_condition": "進行段階に合う素材10個を納品",
+      "stage": "中盤以降",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C01",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "スライム討伐",
+      "initial_condition": "スライム25体",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C02",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "夜の敵の討伐",
+      "initial_condition": "ゾンビ20体",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C03",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "空の敵の討伐",
+      "initial_condition": "デーモンアイ20体",
+      "stage": "序盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C04",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "地下の敵の討伐",
+      "initial_condition": "地下の対象敵25体",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C05",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "スケルトン討伐",
+      "initial_condition": "対象スケルトン20体",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C06",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "ジャングルの敵の討伐",
+      "initial_condition": "対象敵15体",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C07",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "砂漠の敵の討伐",
+      "initial_condition": "対象敵15体",
+      "stage": "序盤～中盤",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C08",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "Hardmodeの敵の討伐",
+      "initial_condition": "対象敵25体",
+      "stage": "Hardmode",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C09",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "イベント戦闘",
+      "initial_condition": "解禁済みイベントの敵25体",
+      "stage": "条件付き",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C10",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "キングスライム討伐",
+      "initial_condition": "1体",
+      "stage": "解禁後",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C11",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "クトゥルフのめだま討伐",
+      "initial_condition": "1体",
+      "stage": "解禁後",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C12",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "邪悪ボス討伐",
+      "initial_condition": "世界を喰らう者／クトゥルフの脳みそ",
+      "stage": "解禁後",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C13",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "クイーンビー討伐",
+      "initial_condition": "1体",
+      "stage": "解禁後",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C14",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "スケルトロン討伐",
+      "initial_condition": "1体",
+      "stage": "解禁後",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C15",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "ディアクロップス討伐",
+      "initial_condition": "1体",
+      "stage": "解禁後",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C16",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "ウォールオブフレッシュ討伐",
+      "initial_condition": "1体",
+      "stage": "解禁後",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C17",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "メカニカルボス討伐",
+      "initial_condition": "JSON指定の対象を討伐",
+      "stage": "Hardmode",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "C18",
+      "category": "combat_boss",
+      "category_label": "戦闘・討伐",
+      "title": "進行段階別ボス討伐",
+      "initial_condition": "プランテラ以降などJSON指定の対象を討伐",
+      "stage": "中盤以降",
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G01",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "木材の共同備蓄",
+      "initial_condition": "合計500個収集",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G02",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "石材の共同備蓄",
+      "initial_condition": "合計1,000個収集",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G03",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "鉱石の共同採掘",
+      "initial_condition": "合計250個採掘",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G04",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "拠点の拡張",
+      "initial_condition": "合計500ブロック設置",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G05",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "壁の共同整備",
+      "initial_condition": "合計500個設置",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G06",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "多地域調査",
+      "initial_condition": "3人以上が指定バイオームを探索",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G07",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "住居の整備",
+      "initial_condition": "有効な住居を合計3軒整備",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G08",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "回復用品の備蓄",
+      "initial_condition": "回復ポーション20個納品",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G09",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "強化用品の備蓄",
+      "initial_condition": "指定ポーション30個納品",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G10",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "敵の掃討",
+      "initial_condition": "対象敵を合計150体討伐",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G11",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "イベント攻略",
+      "initial_condition": "解禁済みイベントをクリア",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G12",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "ボス討伐作戦",
+      "initial_condition": "解禁済み対象ボスを討伐",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G13",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "釣果の共有",
+      "initial_condition": "魚を合計25個収集",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G14",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "薬草の備蓄",
+      "initial_condition": "ハーブを合計50個収集",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G15",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "ボス戦場の準備",
+      "initial_condition": "指定資材を合計100個納品",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G16",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "協力参加",
+      "initial_condition": "5人以上が対象ミッションに貢献",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G17",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "共同探索",
+      "initial_condition": "全体で5種類のバイオームを探索",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "G18",
+      "category": "global_cooperation",
+      "category_label": "全体協力",
+      "title": "公共区域の拡張",
+      "initial_condition": "指定区域にブロックを合計300個設置",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P01",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "個人の木材集め",
+      "initial_condition": "木材60個収集",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P02",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "個人の鉱石採掘",
+      "initial_condition": "鉱石20個採掘",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P03",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "個人の建築",
+      "initial_condition": "ブロック30個設置",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P04",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "地下への挑戦",
+      "initial_condition": "地下層へ到達",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P05",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "バイオーム巡り",
+      "initial_condition": "1日に3種類のバイオームを訪問",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P06",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "個人の戦闘訓練",
+      "initial_condition": "敵15体討伐",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P07",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "個人の素材納品",
+      "initial_condition": "指定素材10個納品",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P08",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "回復用品の補給",
+      "initial_condition": "指定ポーション3個納品",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P09",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "個人の釣り",
+      "initial_condition": "魚5匹を釣る",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P10",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "個人の薬草採集",
+      "initial_condition": "ハーブ10個収集",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P11",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "住居の建築",
+      "initial_condition": "有効な住居1軒",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P12",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "照明の設置",
+      "initial_condition": "松明10個設置",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P13",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "宝石の採集",
+      "initial_condition": "宝石3個収集",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P14",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "ボス戦への参加",
+      "initial_condition": "対象ボスの戦闘参加条件を満たす",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P15",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "進行地域の探索",
+      "initial_condition": "解禁済みの指定地域へ到達",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P16",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "多層採掘",
+      "initial_condition": "1日に異なる3つの深度帯で採掘",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P17",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "探索からの帰還",
+      "initial_condition": "遠方を探索後スポーン周辺へ戻る",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    },
+    {
+      "id": "P18",
+      "category": "personal_challenge",
+      "category_label": "個人向けチャレンジ",
+      "title": "協力への貢献",
+      "initial_condition": "全体ミッションに対象アイテムを納品",
+      "stage": null,
+      "status": "candidate",
+      "enabled_by_default": false
+    }
+  ]
+}
