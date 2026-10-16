@@ -487,7 +487,7 @@
       "category": "building",
       "category_label": "建築・拠点整備",
       "title": "倉庫整備",
-      "initial_condition": "指定エリアに保管用チェスト3個設置",
+      "initial_condition": "保管用チェスト3個を設置（設置場所は自由）",
       "stage": "序盤",
       "status": "candidate",
       "enabled_by_default": false
@@ -507,7 +507,7 @@
       "category": "building",
       "category_label": "建築・拠点整備",
       "title": "休憩地点の整備",
-      "initial_condition": "指定区域に焚き火等を設置",
+      "initial_condition": "自由な場所に休憩地点を整備し、焚き火等を設置",
       "stage": "序盤～中盤",
       "status": "candidate",
       "enabled_by_default": false
@@ -517,7 +517,7 @@
       "category": "building",
       "category_label": "建築・拠点整備",
       "title": "通路建設",
-      "initial_condition": "指定区域に通路用ブロック100個設置",
+      "initial_condition": "通路用ブロックを合計100個設置（場所は自由）",
       "stage": "全般",
       "status": "candidate",
       "enabled_by_default": false
@@ -527,7 +527,7 @@
       "category": "building",
       "category_label": "建築・拠点整備",
       "title": "ボス戦場の整備",
-      "initial_condition": "指定区域に足場100個設置",
+      "initial_condition": "ボス戦に使える足場を合計100個設置（建築場所は自由）",
       "stage": "ボス攻略前",
       "status": "candidate",
       "enabled_by_default": false
@@ -537,7 +537,7 @@
       "category": "building",
       "category_label": "建築・拠点整備",
       "title": "拠点照明の増設",
-      "initial_condition": "公共区域に照明10個設置",
+      "initial_condition": "照明を合計10個設置（場所は自由）",
       "stage": "全般",
       "status": "candidate",
       "enabled_by_default": false
@@ -547,7 +547,7 @@
       "category": "building",
       "category_label": "建築・拠点整備",
       "title": "ベッドの設置",
-      "initial_condition": "指定区域にベッド1個設置",
+      "initial_condition": "ベッド1個設置（場所は自由）",
       "stage": "序盤",
       "status": "candidate",
       "enabled_by_default": false
@@ -1086,8 +1086,8 @@
       "id": "G18",
       "category": "global_cooperation",
       "category_label": "全体協力",
-      "title": "公共区域の拡張",
-      "initial_condition": "指定区域にブロックを合計300個設置",
+      "title": "共同建築への貢献",
+      "initial_condition": "全体でブロックを合計300個設置（場所は自由）",
       "stage": null,
       "status": "candidate",
       "enabled_by_default": false

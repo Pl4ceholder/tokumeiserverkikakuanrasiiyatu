@@ -1,19 +1,13 @@
 # 匿名Terrariaサーバー 企画・要件パッケージ
 
-## ファイル構成
+- `docs/index.html` — 参加者向け公開ページ。参加したときの体験を紹介します。
+- `requirements/` — AI／開発者向け内部要件。公開ページに含めないでください。
 
-- `docs/index.html` — 参加者・企画閲覧者向けの公開説明ページ。内部技術の細部は掲載しない。
-- `requirements/` — AI・開発者向けの内部要件。公開ページに含めない。
+## コーディングAIに渡す場合
+最初に `requirements/CODING_AI_HANDOFF.md` を読ませ、続けて `requirements/README.md` の順で資料を参照させてください。特に `requirements/anonymous_terraria_server_spec.md`、`requirements/anonymous_terraria_api_validation_matrix.md`、`requirements/database_design.md`、`requirements/implementation_plan.md` を必ず渡します。
 
 ## ローカル確認
+`docs/index.html` をブラウザで開くと閲覧できます。ビルド不要です。
 
-`docs/index.html` をブラウザで開いてください。外部ライブラリやビルドツールは不要です。
-
-## GitHub Pagesで公開
-
-1. このフォルダの内容をGitHubリポジトリへ配置します。
-2. GitHubリポジトリの Settings → Pages を開き、Deploy from a branch を選びます。
-3. 公開元ブランチを選択し、フォルダを `/docs` に指定します。
-4. 保存後、Pagesが提示するURLを使います。
-
-**重要：公開元は `/docs` に設定してください。** ルート全体を公開対象にすると内部要件ファイルまで公開される可能性があります。リポジトリ自体をPrivateにするか、公開範囲の設定を必ず確認してください。
+## GitHub Pages
+リポジトリの Settings → Pages で公開元を `/docs` に限定してください。ルート全体を公開すると内部要件まで配信されるおそれがあります。

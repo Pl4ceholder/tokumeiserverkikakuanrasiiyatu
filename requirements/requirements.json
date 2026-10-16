@@ -6,8 +6,8 @@
     "purpose": "既存のDiscord内の人間関係や知名度に過度に左右されず、新しい表示名と公平なスタートで協力プレイできる場を作る。",
     "scope": "Terraria + TShock community multiplayer server; custom plugin proposed",
     "timezone": "Asia/Tokyo",
-    "spec_state": "pre-implementation",
-    "do_not_start_plugin_implementation_until_spec_ready": true
+    "spec_state": "implementation-preflight",
+    "do_not_start_plugin_implementation_until_spec_ready": false
   },
   "source_of_truth": {
     "priority": [
@@ -29,7 +29,7 @@
       "status": "confirmed",
       "priority": "critical",
       "area": "参加者操作",
-      "text": "参加者は通常プレイのためにコマンドを入力しない。案内、ミッション確認、納品、報酬受取はゲーム内UIで提供する。"
+      "text": "参加者は通常プレイのためにコマンドを手入力しない。接続時の認証はプラグインが自動処理する。ルール・参加方法・操作説明はDiscordに集約し、ゲーム内の案内板・ガイドNPC・ミッション案内端末は作らない。報酬受取などの短い操作結果メッセージは許可する。"
     },
     {
       "id": "R-002",
@@ -50,7 +50,7 @@
       "status": "confirmed",
       "priority": "critical",
       "area": "キャラクター",
-      "text": "SSCを有効にしてキャラクターの持ち込みを防ぐ。認証・再接続方式はAPI検証必須。参加者に/registerや/loginを要求しない方針。"
+      "text": "SSCを有効にしてキャラクター持ち込みを防ぐ。接続時にプラグインがログイン処理を自動実行し、参加者に/registerや/loginの手入力を求めない。内部アカウント識別は公開表示名から分離し、方式は対象APIで検証する。"
     },
     {
       "id": "R-005",
@@ -120,7 +120,7 @@
       "status": "confirmed",
       "priority": "high",
       "area": "デイリー報酬",
-      "text": "スポーンの専用受取場所で各プレイヤーがJST日付ごとに1回受け取る。通常チェストの安全な横取り判定ができなければNPC/UIに切り替える。"
+      "text": "ログインボーナスはワールド初期スポーン地点に設ける専用チェストで受け取る。内部プレイヤーIDごとにJST日付で1回。ChestOpenイベントによる個別受取処理を検証し、不成立なら同じ場所の専用UIへ切り替える。周辺区域の建築制限は設けない。"
     },
     {
       "id": "R-015",
@@ -141,7 +141,7 @@
       "status": "confirmed",
       "priority": "high",
       "area": "設定",
-      "text": "ミッション・条件・数量・報酬・解禁日・文言・区域などをJSON設定に分離する。"
+      "text": "ミッション・条件・数量・報酬・解禁日・文言・表彰指標・皆勤賞の対象ボス一覧をJSON設定に分離する。一般的な建築保護区域設定は持たない。"
     },
     {
       "id": "R-018",
@@ -162,7 +162,7 @@
       "status": "confirmed",
       "priority": "high",
       "area": "保護",
-      "text": "公共施設と自由建築区域を分け、共有設備・掲示・報酬受取場所を保護する。TShock標準保護と独自保護の競合を避ける。"
+      "text": "建築・ブロック設置／破壊の区域制限をワールド全体で一切設けない。公共区域と自由建築区域の分割、土地保護、建築保護リージョンは実装しない。唯一の例外は初期スポーン地点のログインボーナス用チェストを成立させるための最小限の処理で、周辺を建築禁止区域にしない。"
     },
     {
       "id": "R-021",
@@ -232,19 +232,96 @@
       "status": "draft",
       "priority": "medium",
       "area": "参加体験",
-      "text": "途中参加・長期不在者が楽しめる進行案内と、その時点の進行段階に合わせた導線を用意する。"
+      "text": "参加方法・ルール・操作説明・日次ミッションの案内はDiscordに集約し、ゲーム内の案内板・ガイドNPC・ミッション案内端末を設けない。途中参加者にはDiscord上で現在の進行と参加方法を案内できるようにする。"
+    },
+    {
+      "id": "R-031",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "表彰",
+      "text": "表彰は10部門（開拓功労賞、採掘功労賞、建築功労賞、薬草採集賞、富豪、釣り神、物資支援賞、ミッション貢献賞、継続冒険賞、皆勤賞）。実績を自動集計し、開催終了時に管理者コマンドで候補確認・確定する。個人ランキングや実績数は公開せず、賞名と受賞者のみ発表する。"
+    },
+    {
+      "id": "R-032",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "案内",
+      "text": "ルール・参加方法・操作説明・案内はDiscordに集約する。ゲーム内の看板、ガイドNPC、ミッション案内端末、納品案内端末は設置しない。既存チャット連携を改修したり、新しいDiscord botを暗黙に追加したりしない。"
+    },
+    {
+      "id": "R-033",
+      "status": "confirmed",
+      "priority": "critical",
+      "area": "建築自由度",
+      "text": "建築・ブロック設置／破壊の区域制限はワールド全体で設けない。ログイン報酬チェストの機能維持に必要な処理のみ例外とするが、周辺を保護・建築禁止区域にしない。"
+    },
+    {
+      "id": "R-034",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "表彰指標",
+      "text": "建築功労賞は設置ブロック数、薬草採集賞は開花状態のハーブ採集／破壊数、富豪は確定時点の保有個人資産、釣り神は成功した釣果数、皆勤賞は設定対象すべてのボス戦に最低1回参加。未検証の指標は実機検証する。"
+    },
+    {
+      "id": "R-035",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "デイリー報酬",
+      "text": "ログインボーナス受取場所はワールド初期スポーン地点に置く。専用チェストの個人別受取処理を検証し、不可なら同じ場所の専用UIへ切り替える。周辺区域を建築制限しない。"
+    },
+    {
+      "id": "R-036",
+      "status": "confirmed",
+      "priority": "high",
+      "area": "ログイン",
+      "text": "接続時にプラグインが内部ログイン処理を自動実行する。参加者がコマンドを手入力することは求めない。高度なセキュリティは作り込まないが、内部アカウントの紐付けと権限混線防止は必須。"
+    },
+    {
+      "id": "R-037",
+      "status": "validation_required",
+      "priority": "critical",
+      "area": "釣果判定",
+      "text": "TShock 6.2.1のFishOutNPCは釣りでNPCが釣れたときのイベントであり、通常の魚・アイテム釣果にはそのまま使えない。釣果成功を取得できるOTAPI／Terraria内部フックを実際のDLLで調査・試験する。"
+    },
+    {
+      "id": "R-038",
+      "status": "validation_required",
+      "priority": "critical",
+      "area": "ボス制御",
+      "text": "ボス出現要求パケットの処理だけでは全経路の阻止を保証できない。NPC Spawnフックを含む自然出現・変身・イベント派生を検証し、全経路阻止を実証するまで完成扱いしない。"
+    },
+    {
+      "id": "R-039",
+      "status": "validation_required",
+      "priority": "high",
+      "area": "報酬チェスト",
+      "text": "TShock 6.2.1には座標付きChestOpenイベントとHandledフラグがある。初期スポーンの指定チェストで通常動作を抑止し、個人別報酬を二重なく処理できるか実機検証する。"
+    },
+    {
+      "id": "R-040",
+      "status": "validation_required",
+      "priority": "high",
+      "area": "ブロック計数",
+      "text": "TileEditに加え、複数タイルのオブジェクト配置を扱うPlaceObject等を照合し、採掘・設置・開花ハーブの計数に重複・漏れがないことを実機検証する。"
     }
   ],
   "linked_specs": {
     "mission_candidates": "mission_candidates.json",
     "boss_schedule": "boss_schedule.json",
-    "full_detail": "project_requirements.md"
+    "full_detail": "anonymous_terraria_server_spec.md",
+    "api_validation": "anonymous_terraria_api_validation_matrix.md",
+    "database_design": "database_design.md",
+    "implementation_plan": "implementation_plan.md",
+    "coding_ai_handoff": "CODING_AI_HANDOFF.md"
   },
   "out_of_scope": [
     "既存のDiscordチャット連携の改修",
     "一般参加者からDiscord→ゲームへの発言を許可する機能",
     "参加者にコマンドを入力させるフォールバック",
-    "完全な追跡不能性の保証"
+    "完全な追跡不能性の保証",
+    "ゲーム内看板・ガイドNPC・ミッション案内端末",
+    "建築エリア制限・自由建築区域の分割",
+    "公開個人ランキング・ポイント順位"
   ],
   "acceptance_criteria_summary": [
     "新規参加から通常プレイまで参加者コマンドなしで進める",
@@ -252,6 +329,10 @@
     "日次更新・再起動・多重処理で進捗や報酬が二重処理されない",
     "未解禁ボスのすべての出現経路を検証で封鎖する",
     "個人報酬と全体報酬の対象範囲が正しい",
-    "バックアップからの復元と不明確な報酬状態の安全な扱いを試験する"
+    "バックアップからの復元と不明確な報酬状態の安全な扱いを試験する",
+    "ワールド全体の建築・ブロック設置／破壊に区域制限がなく、報酬チェスト周辺も建築禁止区域にしない",
+    "ルール・操作説明はDiscordへ集約し、ゲーム内ガイド看板／NPC／端末を設けない",
+    "表彰10部門を自動集計し、個人ランキング非公開・同率複数受賞・二重確定防止を満たす",
+    "釣果判定・開花ハーブ判定・ボス戦参加・全ボス出現経路阻止を対象DLLで検証する"
   ]
 }
